@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettextVSCommands.Tests", "GettextVSCommands.Tests\GettextVSCommands.Tests.csproj", "{875692D1-9CD3-46AD-9AC0-96469A189C63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettextVSCommands", "GettextVSCommands\GettextVSCommands.csproj", "{A7E42656-0295-4310-BCDA-EE03CBC9E061}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{875692D1-9CD3-46AD-9AC0-96469A189C63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{875692D1-9CD3-46AD-9AC0-96469A189C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{875692D1-9CD3-46AD-9AC0-96469A189C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{875692D1-9CD3-46AD-9AC0-96469A189C63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7E42656-0295-4310-BCDA-EE03CBC9E061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7E42656-0295-4310-BCDA-EE03CBC9E061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7E42656-0295-4310-BCDA-EE03CBC9E061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7E42656-0295-4310-BCDA-EE03CBC9E061}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
