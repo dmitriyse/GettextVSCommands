@@ -6,7 +6,6 @@ namespace GettextVSCommands
 {
     using System;
     using System.ComponentModel.Design;
-    using System.Globalization;
 
     using EnvDTE;
 
@@ -95,14 +94,32 @@ namespace GettextVSCommands
         {
             var document = _dte.ActiveDocument;
             var selection = document.Selection as TextSelection;
+
             if (selection != null)
             {
                 if (selection.Text != null)
                 {
-                    // TODO: Implement config gathering.
-                    var processor = new LocalizeCSharpFormatStringProcessor(new GettextConfig());
-                    var replaced = processor.Process(selection.Text);
-                    selection.Text = replaced;
+                    var undoContextWasOpen = !_dte.UndoContext.IsOpen;
+
+                    if (undoContextWasOpen)
+                    {
+                        _dte.UndoContext.Open("LocalizeCSharpFormatString");
+                    }
+
+                    try
+                    {
+                        // TODO: Implement config gathering.
+                        var processor = new LocalizeCSharpFormatStringProcessor(new GettextConfig());
+                        var replaced = processor.Process(selection.Text);
+                        selection.Text = replaced;
+                    }
+                    finally
+                    {
+                        if (undoContextWasOpen)
+                        {
+                            _dte.UndoContext.Close();
+                        }
+                    }
                 }
             }
 
